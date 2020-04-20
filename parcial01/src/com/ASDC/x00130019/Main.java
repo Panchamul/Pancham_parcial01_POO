@@ -39,7 +39,8 @@ public class Main {
                     }
                     meses = Integer.parseInt(JOptionPane.showInputDialog(null,"Cantidad de meses a trabajar: "));
                     empleado1.add(new ServicioProfesional(nombre,puesto,salario,meses));
-                            System.out.println(CalculadoraImpuestos.calcularPago(aux));
+                    JOptionPane.showMessageDialog(null,CalculadoraImpuestos.mostrarTotales());
+                    System.out.println(CalculadoraImpuestos.mostrarTotales());
 
 
                 case '2':
@@ -58,9 +59,10 @@ public class Main {
                     }
                     extension = Integer.parseInt(JOptionPane.showInputDialog(null,"Extension: "));
                     empleado2.add(new PlazaFija(nombre,puesto,salario,extension));
-                    System.out.println(CalculadoraImpuestos.calcularPago(aux));
+                    JOptionPane.showMessageDialog(null,CalculadoraImpuestos.mostrarTotales());
+                    System.out.println(CalculadoraImpuestos.mostrarTotales());
             }
-        }while (op != 3);
+        }while (op != 2);
 
 
     }
@@ -70,5 +72,6 @@ public class Main {
         System.out.println("Seleccione el tipo de trabajo que posee");
         System.out.println("1. Servicio Profesional");
         System.out.println("2. Plaza fija");
+        System.out.println("3. Salir");
     }
 }
